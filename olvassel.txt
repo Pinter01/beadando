@@ -1,5 +1,5 @@
-Készítő: Szillery
-URL: [Ide kerül majd a GitHub Pages link]
+Készítő: Pintér Máté
+URL:https://pinter01.github.io/beadando/menu.html
 
 Leírás:
 Ez a weboldal egy prémium pizzéria ("Ízek & Szeletek") online felülete. A látogatók megtekinthetik a kínálatot, asztalt foglalhatnak, és egy egyedi kalkulátor segítségével kiszámolhatják a házibulihoz szükséges pizza mennyiséget.
