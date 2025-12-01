@@ -1,0 +1,19 @@
+Készítő: Szillery
+URL: [Ide kerül majd a GitHub Pages link]
+
+Leírás:
+Ez a weboldal egy prémium pizzéria ("Ízek & Szeletek") online felülete. A látogatók megtekinthetik a kínálatot, asztalt foglalhatnak, és egy egyedi kalkulátor segítségével kiszámolhatják a házibulihoz szükséges pizza mennyiséget.
+
+Saját JavaScript kód:
+1. js/calculator.js: Ez a fájl tartalmazza a "Pizza Party Kalkulátor" logikáját. A felhasználó megadja a felnőttek és gyerekek számát, valamint az éhségszintet, a program pedig egy képlet alapján kiszámolja és megjeleníti a javasolt pizza darabszámot.
+2. js/form-validation.js: Ez a kód felel a kapcsolatfelvételi űrlap validálásáért. Ellenőrzi a kötelező mezőket, a dátum helyességét (nem lehet múltbeli), és visszajelzést ad a felhasználónak.
+3. js/menu.js: Ez a script generálja dinamikusan az étlap kártyáit egy tömbből, valamint kezeli a kosár funkciókat (hozzáadás, törlés, összegzés).
+
+Egyedi betűtípus:
+Google Fonts: 'Outfit' (szövegtörzs) és 'Playfair Display' (címsorok).
+Helye: index.html <head> részében linkelve.
+
+Felhasznált külső források:
+- Bootstrap 5 (CSS keretrendszer a reszponzivitáshoz és komponensekhez)
+- FontAwesome (Ikonok)
+- Google Fonts (Betűtípusok)

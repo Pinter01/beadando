@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Számolja ki mennyi pizzára van szüksége a bulihoz.">
+    <meta name="author" content="Szillery">
+    <title>Pizza Party Kalkulátor | Ízek & Szeletek</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-pizza-slice me-2"></i>Ízek & Szeletek</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Főoldal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Étlap</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="kalkulator.html">Kalkulátor</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kapcsolat.html">Kapcsolat</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5 mt-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="calculator-card">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-calculator fa-3x text-primary mb-3"></i>
+                            <h2 class="fw-bold">Pizza Party Kalkulátor</h2>
+                            <p class="text-muted">Nem tudja mennyi pizzát rendeljen? Segítünk!</p>
+                        </div>
+
+                        <form id="calculatorForm">
+                            <div class="mb-3">
+                                <label for="adults" class="form-label">Felnőttek száma</label>
+                                <input type="number" class="form-control" id="adults" min="0" value="0">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="kids" class="form-label">Gyerekek száma</label>
+                                <input type="number" class="form-control" id="kids" min="0" value="0">
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label">Éhségszint</label>
+                                <div class="btn-group w-100" role="group">
+                                    <input type="radio" class="btn-check" name="hunger" id="light" value="0.75">
+                                    <label class="btn btn-outline-primary" for="light">Csipegetős</label>
+
+                                    <input type="radio" class="btn-check" name="hunger" id="normal" value="1" checked>
+                                    <label class="btn btn-outline-primary" for="normal">Normál</label>
+
+                                    <input type="radio" class="btn-check" name="hunger" id="hungry" value="1.5">
+                                    <label class="btn btn-outline-primary" for="hungry">Farkaséhes</label>
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn btn-primary w-100 py-3 rounded-pill fw-bold"
+                                onclick="calculatePizza()">Számolás</button>
+                        </form>
+
+                        <div id="result" class="result-display">
+                            <h3 class="mb-0">Szükséges mennyiség:</h3>
+                            <div class="display-1 fw-bold my-2" id="pizzaCount">0</div>
+                            <p class="mb-0">db 32cm-es pizza</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2023 Ízek & Szeletek. Minden jog fenntartva.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/calculator.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tekintse meg prémium pizza kínálatunkat.">
+    <meta name="author" content="Szillery">
+    <title>Étlap | Ízek & Szeletek</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-pizza-slice me-2"></i>Ízek & Szeletek</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Főoldal</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="menu.html">Étlap</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kalkulator.html">Kalkulátor</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kapcsolat.html">Kapcsolat</a></li>
+                    <li class="nav-item ms-3">
+                        <button class="btn btn-primary position-relative" data-bs-toggle="modal"
+                            data-bs-target="#cartModal">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                                id="cart-count">
+                                0
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5 mt-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h5 class="text-primary text-uppercase letter-spacing-2">Kínálatunk</h5>
+                <h2 class="display-5 fw-bold">Válogatott Pizzák</h2>
+            </div>
+
+            <div class="d-flex justify-content-center mb-5 gap-3">
+                <button class="btn btn-outline-dark active rounded-pill px-4"
+                    onclick="filterMenu('All')">Összes</button>
+                <button class="btn btn-outline-dark rounded-pill px-4" onclick="filterMenu('Meat')">Húsos</button>
+                <button class="btn btn-outline-dark rounded-pill px-4"
+                    onclick="filterMenu('Veggie')">Vegetáriánus</button>
+            </div>
+
+            <div class="row g-4" id="menu-container">
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2023 Ízek & Szeletek. Minden jog fenntartva.</p>
+            <div class="mt-2">
+                <a href="#" class="text-white-50 me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white-50 me-3"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white-50"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title fw-bold">Kosár</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Bezárás"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div id="cart-items" class="mb-4">
+                        <div class="text-center text-muted py-4">A kosár üres.</div>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                        <h4 class="fw-bold mb-0">Összesen</h4>
+                        <h4 class="fw-bold text-primary mb-0" id="cart-total">0 Ft</h4>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-0">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Vásárlás folytatása</button>
+                    <button type="button" class="btn btn-primary px-4" onclick="handleCheckout()">Fizetés</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+
+</html>
